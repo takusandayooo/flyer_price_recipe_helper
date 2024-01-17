@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>チラシ→レシピ</title>
+
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/css/recipe.css" />
+
+    <title>チラシ</title>
+  </head>
+
+  <body>
+    <header>
+      <h1><strong>チラシ→レシピ</strong></h1>
+    </header>
+    <h2>材料</h2>
+    <div class="ranking">
+      {% for item in rankingList %}
+        {% if item["priceList"][0]==None %}
+          <h3>{{item["itemName"]}}</h3>
+          <h3>価格情報がありません</h3>
+        {% else %}
+        <h3>{{item["itemName"]}}</h3>
+        <table>
+          <tr>
+            <td>ランキング</td>
+            <td>店</td>
+            <td>値段</td>
+            <td>写真</td>
+          </tr>
+          {% for i in range(0,3) %}
+            {% if item["priceList"][i]!=None %}
+              <tr>
+                <td>{{i+1}}.</td>
+                <td>{{item["shopList"][i]}}</td>
+                <td>{{item["priceList"][i]}}円</td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        </table>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <h2>レシピ</h2>
+    <div class="recipe_table">
+      <table>
+        <tr>
+          <td>レシピタイトル</td>
+          <td>レシピの説明</td>
+          <td>URL</td>
+          <td>カロリーURL</td>
+        </tr>
+        {% for recipe in recipe_lists %}
+        <tr>
+          {% if recipe["recipe_title"]!='N/A' %}
+          <td>{{recipe["recipe_title"]}}</td>
+          <td>{{recipe["recipe_description"]}}</td>
+          <td><a href='{{recipe["url"]}}'>レシピURL</a></td>
+          <td><a href='{{ url_for("calorie_item", index=recipe["id"]) }}'>カロリーURL</a></td>          
+          {% endif %}
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>

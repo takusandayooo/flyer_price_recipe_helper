@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/calorieItem.css">
+    <title>フォーム</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="/calorieGraph" method="POST">
+            <h1>材料の質量の入力</h1>
+            {% for item in item_dict %}
+            <label for="item{{ item['index'] }}">{{ item["name"] }}</label>
+            <input type="text" name="zairyou{{ item['index'] }}" value="{{item['gram']}}">
+            {% endfor %}
+            <label for="sex">性別</label>
+            <select name="sex">
+                <option value="null" disabled selected>選択して下さい</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+            <label for="age">年齢(18~64の値を入力)</label>
+            <input type="number" min="18" max="64" name="age">
+            <button type="submit">送信</button>
+        </form>
+    </div>
+</body>
+
+</html>

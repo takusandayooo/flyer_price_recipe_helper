@@ -1,0 +1,16 @@
+.ranking table, td {
+    border: 1px solid #333;
+}
+.app_name {
+    text-align: center;
+}
+.explanation {
+    text-align: center;
+}
+.text_box {
+    text-align: center;
+}
+.submit {
+  display: block;
+  margin: 0 auto;
+}
