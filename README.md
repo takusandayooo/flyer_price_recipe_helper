@@ -54,15 +54,15 @@ http://127.0.0.1:5000 にアクセスしwebサイトを表示する
 ## webサイトの使い方
 1. テキストボックスに食材名を入力し検索開始ボタンを押す  
    *食材が複数ある場合は、`,`(コンマ)で区切る
-   ![スクリーンショット 2024-01-04 14 52 21](https://github.com/takusandayooo/projects/assets/54734834/b29aa91e-8f6b-42aa-bbb3-908e07a131cc)
+   ![photo1](./readme_photos/294097672-b29aa91e-8f6b-42aa-bbb3-908e07a131cc.png)
 2. 食材欄がチラシからの値段情報によるランキング表示  
    レシピ欄は入力された食材を用いたレシピを表示  
    カロリーURLをタップすることで食材のgを入力する画面に移動する
 
-   ![スクリーンショット 2024-01-04 14 59 52](https://github.com/takusandayooo/projects/assets/54734834/3d8138ac-155c-40a9-a31f-77fbc90da7be)
+   ![photo2](./readme_photos/294098596-3d8138ac-155c-40a9-a31f-77fbc90da7be.png)
 
 3. 材料の質量の入力   
    テキストボックスにグラムを入力しその後年齢性別を入力し、送信ボタンを押す
-   ![スクリーンショット 2024-01-04 15 05 38](https://github.com/takusandayooo/projects/assets/54734834/97459c62-ec40-4db4-83ad-25599ac6573b)
+   ![photo3](./readme_photos/294099495-97459c62-ec40-4db4-83ad-25599ac6573b.png)
 4. レーダーチャートの表示(データはサンプルデータを使用しています)
-   ![スクリーンショット 2024-01-04 15 08 05](https://github.com/takusandayooo/projects/assets/54734834/4a3c11cc-35ee-455b-b251-3976276942ef)
+   ![photo4](./readme_photos/294099853-4a3c11cc-35ee-455b-b251-3976276942ef.png)
